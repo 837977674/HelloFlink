@@ -50,7 +50,7 @@ class Tokenizer2 implements FlatMapFunction<String, Tuple2<String, Integer>> {
         //out.collect(new Tuple2<>(value.toLowerCase(), counter.get(value)));
         String delimiter=",";
         String[] v1=value.split(delimiter);
-        out.collect(new Tuple2(v1[0].toLowerCase(), v1[1]));
+        out.collect(new Tuple2(v1[0].toLowerCase(), Integer.valueOf(v1[1])));
         //System.out.println(out.collect(new Tuple2<>(value.toLowerCase(), 1)));
     }
 
